@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using SMSWebApplication1.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+string myConString = builder.Configuration.GetConnectionString("conString");
+builder.Services.AddDbContext<SMSDbContext>(options => options.UseSqlServer(myConString));
 
 var app = builder.Build();
 

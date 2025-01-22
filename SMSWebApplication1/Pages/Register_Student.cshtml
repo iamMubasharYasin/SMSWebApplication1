@@ -1,0 +1,58 @@
+﻿@page
+@model SMSWebApplication1.Pages.Register_Student
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 justify-content-center">
+
+        @* @if (ViewData  ["flag"] == "true") *@
+        @* { *@
+        @*     <div class="alert alert-success" role="alert"> *@
+        @*         Data Saved Successfully! *@
+        @*     </div> *@
+        @* } *@
+        
+        
+        <h2>Please Enter Student Details</h2>
+        <hr/>
+        <form class="row g-3" method="post">
+            <div class="col-md-4">
+                <label class="form-label">Name</label>
+                <input class="form-control" asp-for="student.Name">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">FatherName</label>
+                <input class="form-control" asp-for="student.FatherName">
+            </div>
+
+
+            <div class="col-md-4">
+                <label class="form-label">RollNumber</label>
+                <input class="form-control" asp-for="student.RollNumber">
+            </div>
+
+
+            <div class="col-md-4">
+                <label class="form-label">Semester</label>
+                <input class="form-control" asp-for="student.Semester">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Email</label>
+                <input class="form-control" asp-for="student.Email">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Address</label>
+                <input class="form-control" asp-for="student.Address">
+            </div>
+
+            <div class="col-md-12">
+                <input type="submit" value="Register Student" class="btn btn-success">
+            </div>
+
+
+        </form>
+    </div>
+</div>
